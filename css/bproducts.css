@@ -1,0 +1,42 @@
+body{
+	background: #FFFFFF;
+}
+.head-wrap-top{
+	margin-top: 35px;
+	width: 96%;
+	height: 450px;
+	margin-left: 2%;
+	background: #FFFFFF;
+}
+.head-wrap-title ul li{
+	list-style: none;
+	width: 20%;
+	float: left;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	background: #E8E8E8;
+}
+.head-wrap-title ul li span{
+	font-size: 12px;
+	opacity: 0.5;
+}
+.head-wrap-list ul li{
+	list-style: none;
+	width: 20%;
+	float: left;
+	text-align: center;
+	height: 55px;
+	line-height: 55px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #E8E8E8;
+}
+.head-wrap-list ul li span{
+	font-size: 12px;
+	opacity: 0.5;
+}
+.head-wrap-list ul li img{
+	margin-top: 5px;
+	width: 50px;
+	height: 45px;
+}

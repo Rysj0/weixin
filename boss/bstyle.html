@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>风格销售</title>
+		<meta charset="utf-8" />
+
+		<style>
+			form {
+				margin-left: 70%;
+				
+			}
+			form select{
+				height: 30px;
+				
+				
+			}
+			form select option{
+				margin-left: 10px;
+				
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<form>
+			<select name="cars">
+				<option value="volvo" >现代经典</option>
+				<option value="saab">古典风</option>
+				<option value="fiat" selected="selected">英伦风</option>
+				<option value="audi">嘻哈风</option>
+			</select>
+		</form>
+		<div id="container" style="min-width: 310px; height: 200px; margin: 0 auto ; margin-top: 5px;"></div>
+
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+		<script>
+			Highcharts.chart('container', {
+				chart: {
+					type: 'line'
+				},
+				title: {
+					text: null
+				},
+				subtitle: {
+					text: '',
+				},
+				xAxis: {
+					categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+					gridLineWidth: 0,
+
+				},
+				yAxis: {
+					allowDecimals: false,
+					min: 0,
+					title: {
+						text: ''
+					},
+
+					tickPixelInterval: 30
+				},
+				plotOptions: {
+					column: {
+						dataLabels: {
+							enabled: false,
+							color: '#10AEFF',
+							pointPadding: 0.2,
+							pointWidth: 20,
+						},
+
+						enableMouseTracking: false
+					}
+				},
+				series: [{
+					name: ' ',
+					data: [700, 600, 900, 800, 400, 400, 500, 666, 555, 555, 111, 666],
+					color: "lightpink",
+					showInLegend: false,
+					lineWidth: 1
+				}],
+				credits: {
+					enabled: false // 禁用版权信息
+				},
+				exporting: {
+					enabled: false //隐藏导出
+				}
+			});
+		</script>
+	</body>
+
+</html>

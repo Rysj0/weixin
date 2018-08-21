@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/details.css" />
+		
+		<!--引用jqweui css-->
+      <link rel="stylesheet" href="../dist/lib/weui.min.css" />
+      <link rel="stylesheet" href="../dist/css/jquery-weui.min.css" />
+	</head>
+	<body>
+		<style>
+ 	/*修改导航样式*/
+ 	.weui-navbar{
+ 	width: 80%;
+ 	margin-left: 10%; 
+ 	margin-top: 10px;
+ 	background: #10AEFF;
+ 	border-radius: 10px;
+ 	border:1px solid #FFFFFF;	
+ 	}
+ 	.weui-navbar__item{
+ 		font-size: 18px;
+ 		color: #FFFFFF;
+ 	}
+ 	
+ </style>
+ 
+<!--导航栏-->
+<header class="head-wrap">	
+<div class="weui-tab">
+  <div class="weui-navbar">
+    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+    基本信息
+    </a>
+    <a class="weui-navbar__item" href="#tab2">
+      商品列表
+    </a>
+   <a class="weui-navbar__item" href="#tab3">
+      审批信息
+   </a>
+  </div>
+
+  <div class="weui-tab__bd">
+  	<div class="section-main">
+  		<!--基本信息-->
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单编号</span>
+     		<span class="main-wrap-right">2018052569036</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单类型</span>
+     		<span class="main-wrap-right">正常订单</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">渠道代码</span>
+     		<span class="main-wrap-right">CS001</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">付款方式</span>
+     		<span class="main-wrap-right">全款</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">下单时间</span>
+     		<span class="main-wrap-right">2018-05-25</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">安装日期</span>
+     		<span class="main-wrap-right">2018-07-26</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">首款日期</span>
+     		<span class="main-wrap-right"></span>
+     	</li>
+     </div>
+     
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">折扣比例</span>
+     		<span class="main-wrap-right">1</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户名称</span>
+     		<span class="main-wrap-right">1</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户电话</span>
+     		<span class="main-wrap-right">189345645653</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户地址</span>
+     		<span class="main-wrap-right">广州市番禺区南村镇万达广场B2-2601</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">是否有电梯</span>
+     		<span class="main-wrap-right">是</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">是否电梯口是否小于50米</span>
+     		<span class="main-wrap-right">是</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单备注</span>
+     		<span class="main-wrap-right"></span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">设计师</span>
+     		<span class="main-wrap-right">张三 159342354569</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">项目经理</span>
+     		<span class="main-wrap-right">王五 13967567623</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">监理</span>
+     		<span class="main-wrap-right">赵六 13350983421</span>
+     	</li>
+     </div>
+     
+    
+     
+    </div>
+    <!--商品列表-->	
+    <div id="tab2" class="weui-tab__bd-item"> 
+    <!--1-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号： KJB-9030-K2262</span>
+				</li>
+				<li>
+					<span>规格： 沙发床</span>
+				</li>
+				<li>
+					<span>尺寸： 沙发： 2260*880*830 （座包高400）</span>
+				</li>
+				<li>
+				
+					  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span>  &nbsp;  沙发床：1900*1400*280</span>
+				<li>
+					<span>数量：1</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：布艺沙发</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    </ul>
+		</div>
+	</div>
+	
+	  <!--2-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号： KJBS-9122-K2289</span>
+				</li>
+				<li>
+					<span>规格： 沙发床  </span>
+				</li>
+				<li>
+					<span>尺寸： 沙发： 2220*850*780 （座包高430）</span>
+				</li>
+				<li>
+				
+					  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span>  &nbsp;  沙发床：2220*1400*430</span>
+				<li>
+					<span>数量：1</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：餐台</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    </ul>
+		</div>
+	</div>
+	 <!--3-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号：OBL-9201-19</span>
+				</li>
+				<li>
+					<span>规格： 餐台  </span>
+				</li>
+				<li>
+					<span>尺寸：  1490*900*785</span>
+				</li>
+				<li>
+				
+					  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span>  &nbsp;  </span>
+				<li>
+					<span>数量：1</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：次卧床</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    </ul>
+		</div>
+	</div>
+	
+	<!--4-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号：OBL-9801</span>
+				</li>
+				<li>
+					<span>规格： 1.5普箱床  </span>
+				</li>
+				<li>
+					<span>尺寸： 外框尺寸： 2040*1600*1055</span>
+				</li>
+				<li>
+				
+					  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span>  &nbsp;  
+					  	内框尺寸：1.5*2.0</span>
+				<li>
+					<span>数量：1</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：次卧床</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    </ul>
+		</div>
+	</div>
+	
+	<div class="main-wrap-list-num">
+		<span>
+			<strong>合计数量：4</strong>
+		</span>
+	</div>
+    </div>
+ 
+   <!--审批信息--> 
+<div id="tab3" class="weui-tab__bd-item">
+	<!--导航下横线-->
+	<div class="border">
+		
+	</div>
+
+      <div class="main-wrap-mation">
+      	<div class="main-wrap-process">
+      	<span>流程</span>
+      	</div>
+      	<!--时间线-->
+      	<ul class="time-vertical">
+        <li>
+        	<b></b><span>1</span>
+        	<a href="javascript:void(0)">张三  发起审批</a>
+        </li>
+        <li><b></b><span>2</span>
+        	<a href="javascript:void(0)">李四审批</a>
+        </li>
+        <li><b></b><span>3</span>
+        	<a href="javascript:void(0)">完成</a>
+        </li>
+    </ul>	
+      </div>
+       <div class="main-wrap-mation">
+      	<div class="main-wrap-process">
+      	<span>日志</span>
+      	</div>
+      	<!--第二时间线-->
+      	<div class="time-vertical">
+      		<ul class="time-vertical-two">
+        <li>
+        	<b></b>
+        	<span style="color: #CE272D;">2018年5月26日 13:56</span><br />
+        	<span>张三  创建审批</span><br />
+        	
+        </li>
+        <li><i></i>
+           <span style="color: #CE272D;">2018年5月26日 14:56</span><br />
+        	<span style="color: #04BE02;">李四  审批通过</span><br />
+        	<span>可以</span>
+        	
+        </li>
+       
+    </ul>
+    </div>
+      </div>
+</div>
+    
+    
+    
+  </div>
+   </div> 
+</div>
+</header>
+		<!--引用jqweui js-->
+<script  src="../dist/lib/jquery-2.1.4.js" ></script>
+<script  src="../dist/js/jquery-weui.min.js" ></script>
+
+
+<script  src="../dist/js/swiper.min.js" ></script>
+<script  src="../dist/js/city-picker.min.js" ></script>
+
+	</body>
+</html>

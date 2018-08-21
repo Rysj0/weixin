@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据统计</title>
+		<link rel="stylesheet" type="text/css" href="../css/bdata.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<div class="head-wrap-top"">
+				<div class="head-wrap-list">
+					<ul>
+						<li>
+							<img src="../img/wode1.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0个</span><br />
+							<span>客户总数</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="../img/faxian1.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0次</span><br />
+							<span>当前订单总数</span>
+						</li>
+					</ul>
+				</div>
+				<div class="head-wrap-list">
+					<ul>
+						<li>
+							<img src="../dist/demos/images/present.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0元</span><br />
+							<span>本月销售额</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="../dist/demos/images/present.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0单</span><br />
+							<span>已付金额</span>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="head-wrap-list">
+					<ul>
+						<li>
+							<img src="../dist/demos/images/present.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0元</span><br />
+							<span>本年销售额</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="../dist/demos/images/present.png" />
+						</li>
+						<li>
+							<i></i>
+						</li>
+						<li>
+							<span>0元</span><br />
+							<span>应付金额</span>
+						</li>
+					</ul>
+				</div>
+				
+				
+			</div>
+		</header>
+		<!--中部导航-->
+		<section>
+			<!--头部导航栏-->
+			<div class="head-nav">
+				<nav>
+					<ul class="clearfix">
+						<li>
+							<a href="bsales.html">
+								<img src="../dist/demos/images/icon_nav_article.png" alt="" />
+								<p>销售走势</p>
+							</a>
+						</li>
+						<li>
+							<a href="border.html">
+								<img src="../dist/demos/images/icon_nav_calendar.png" alt="" />
+								<p>订单走势</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="../dist/demos/images/icon_nav_cell.png" alt="" />
+								<p>产品销售</p>
+							</a>
+						</li>
+						<li>
+							<a href="bstyle.html">
+								<img src="../dist/demos/images/icon_nav_photo.png" alt="" />
+								<p>风格销售</p>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		
+		<!--底部柱形图-->
+	   <footer>
+	   	<div class="foot-warp-title">
+	   		<li>
+	   			<div class="foot-warp-frame"></div>
+	   		</li>
+	   		<li>
+	   			
+	   		<span>
+	   			订单数(笔)
+	   		</span>
+	   		</li>
+	   	</div>
+	   	<div id="container" style="min-width: 310px; height: 200px; margin: 0 auto ; margin-top: 0px;"></div>
+	   </footer>
+	   
+	   
+	   
+		<!--引入highcharts文件-->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script>
+		
+		Highcharts.chart('container', {
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: null
+			},
+			subtitle: {
+				text: '',	
+			},
+			xAxis: {
+				categories: ['待审核', '订单走势', '已提交', '今日安装', '今日销售', '已处理售后'],
+				gridLineWidth: 1
+			},
+			yAxis: {
+				tickPixelInterval:20,
+				allowDecimals: false,
+				min: 0,
+				title: {
+					text: ''
+				}
+			},
+			plotOptions: {
+				column: {
+					dataLabels: {
+						enabled: true,					
+						color:'#10AEFF'
+					},
+					enableMouseTracking: false
+				}
+			},
+			series: [{
+				name: ' ',
+				data: [7, 6, 9, 8, 4, 4],
+				color: "lightpink",
+				showInLegend: false,
+				lineWidth: 2
+			}],
+			credits: {
+				enabled: false // 禁用版权信息
+			},
+			exporting: {
+				enabled: false //隐藏导出
+			} 
+		});
+	</script>
+
+	
+	</body>
+</html>

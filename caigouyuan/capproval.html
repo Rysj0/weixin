@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单详情</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/approval.css" />
+		
+		<!--引用jqweui css-->
+      <link rel="stylesheet" href="../dist/lib/weui.min.css" />
+      <link rel="stylesheet" href="../dist/css/jquery-weui.min.css" />
+	</head>
+	<body>
+		<style>
+ 	/*修改导航样式*/
+ 	.weui-navbar{
+ 	width: 70%;
+ 	height:30px;
+ 	margin-left: 15%; 
+ 	margin-top: 10px;
+ 	background: #10AEFF;
+ 	border-radius: 10px;
+ 	border:1px solid #FFFFFF;
+ 	position: absolute;	
+ 	}
+ 	.weui-navbar a span{
+ 		position: absolute;
+ 		margin-top: -10px;
+ 		left: 30%;
+ 	}
+ 	.weui-navbar__item{
+ 		/*font-size: 18px;*/
+ 		color: #FFFFFF;
+ 	}
+ 	
+ </style>
+ 
+<!--导航栏-->
+<header class="head-wrap">	
+<div class="weui-tab">
+  <div class="weui-navbar">
+    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+  <span>待我审批</span>
+    </a>
+    <a class="weui-navbar__item" href="#tab2">
+      <span>已审批</span>
+    </a>
+  </div>
+
+  <div class="weui-tab__bd">
+  	<div class="section-main">
+  		<!--待我审批-->
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+     <a href="cmination.html">
+     <div class="main-wrap">
+     	<div class="main-wrap-top">
+     		<ul>
+     			<li>
+     				<img src="../dist/demos/images/avatar.jpg"/>
+     			</li>
+     		</ul>
+     		<ul>
+     			<li>
+     				<span>李四  发起了订单审批申请</span><br />
+     				<span>2018年5月26日 13: 56</span>
+     			</li>
+     		</ul>
+     	</div>
+     	<div class="main-wrap-center">
+     		<span>订单编号： 2018052569036</span>
+     		<span>客户名称： 张波</span>
+     		<span>商品数量： 4</span>
+     	</div>
+        <div class="main-wrap-bottom">
+        	<span>
+        		等待  王五  审批
+        	</span>
+        </div>
+     	
+     </div>
+   
+   
+     
+    </div>
+    </a>
+    <!--已审批-->	
+<div id="tab2" class="weui-tab__bd-item"> 
+   <!--查看通过审批信息-->
+   <a href="cagree.html">
+   <div class="main-wrap">
+     	<div class="main-wrap-top">
+     		<ul>
+     			<li>
+     				<img src="../dist/demos/images/avatar.jpg"/>
+     			</li>
+     		</ul>
+     		<ul>
+     			<li>
+     					<span>李四  发起了订单审批申请</span><br />
+     				<span>2018年5月26日 13: 56</span>
+     			</li>
+     		</ul>
+     	</div>
+     	<div class="main-wrap-center">
+     		<span>订单编号： 2018052569036</span>
+     		<span>客户名称： 张波</span>
+     		<span>商品数量： 4</span>
+     	</div>
+        <div class="main-wrap-bottom">
+        	<span style="color: #00BFFF;">
+        		审批通过
+        	</span>
+        </div>
+     </div>
+   </a>
+    <!--查看拒绝审批信息-->
+    <a href="crefuse.html">
+   <div class="main-wrap">
+     	<div class="main-wrap-top">
+     		<ul>
+     			<li>
+     				<img src="../dist/demos/images/avatar.jpg"/>
+     			</li>
+     		</ul>
+     		<ul>
+     			<li>
+     				<span>李四  发起了订单审批申请</span><br />
+     				<span>2018年5月26日 13: 56</span>
+     			</li>
+     		</ul>
+     	</div>
+     	<div class="main-wrap-center">
+     		<span>订单编号： 2018052569036</span>
+     		<span>客户名称： 张波</span>
+     		<span>商品数量： 4</span>
+     	</div>
+        <div class="main-wrap-bottom">
+        	<span style="color: red;">
+        		已拒绝
+        	</span>
+        </div>
+     </div>
+   </a>
+
+
+</div>
+   
+    
+    
+    
+  </div>
+   </div> 
+</div>
+</header>
+		<!--引用jqweui js-->
+<script  src="../dist/lib/jquery-2.1.4.js" ></script>
+<script  src="../dist/js/jquery-weui.min.js" ></script>
+
+
+<script  src="../dist/js/swiper.min.js" ></script>
+<script  src="../dist/js/city-picker.min.js" ></script>
+
+	</body>
+</html>

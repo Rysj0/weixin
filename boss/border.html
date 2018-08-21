@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>订单走势</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<style>
+			.foot-warp-title {
+				margin-top: 25px;
+				list-style: none;
+			}
+			
+			.foot-warp-title li {
+				position: relative;
+				float: left;
+				margin-right: 15px;
+			}
+			
+			.foot-warp-frame {
+				margin-left: 150px;
+				margin-top: 5px;
+				width: 25px;
+				height: 10px;
+				background: #FFFFFF;
+				border: 2px solid #00BFFF;
+			}
+			
+			.foot-warp-title li span {
+				opacity: 0.5;
+				color:#10AEFF;
+			}
+		</style>
+
+
+	</head>
+
+	<body>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <div class="foot-warp-title">
+			<li>
+				<div class="foot-warp-frame"></div>
+			</li>
+			<li>
+				<span>
+	   			订单数量
+	   		</span>
+			</li>
+		</div>
+		<div id="container" style="min-width: 310px; height: 200px; margin: 0 auto ;"></div>
+
+	</body>
+	<script>
+		Highcharts.chart('container', {
+			chart: {
+				type: 'line'
+			},
+			title: {
+				text: null
+			},
+			subtitle: {
+				text: '',
+				style:{
+					color:'#10AEFF'
+				}
+				
+			},
+			xAxis: {
+				categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+				gridLineWidth: 1
+			},
+			yAxis: {
+				tickPixelInterval:20,
+				min: 0,
+				title: {
+					text: ''
+				},
+				labels: {
+					formatter: function() {
+						return this.value / 1;
+					}
+				}
+			},
+			plotOptions: {
+				line: {
+					dataLabels: {
+						enabled: false
+					},
+					enableMouseTracking: false
+				}
+			},
+			series: [{
+				name: ' ',
+				data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 20, 26.5, 23.3, 18.3, 13.9, 9.6],
+				color: "#007AFF",
+				showInLegend: false,
+				lineWidth: 2
+			}],
+			credits: {
+				enabled: false // 禁用版权信息
+			},
+			exporting: {
+				enabled: false
+			} //隐藏导出
+		});
+	</script>
+
+</html>

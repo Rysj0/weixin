@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>审批详情</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<!--共用mination.css-->
+		<link rel="stylesheet" href="../css/mination.css" />
+		
+		<!--引用jqweui css-->
+      <link rel="stylesheet" href="../dist/lib/weui.min.css" />
+      <link rel="stylesheet" href="../dist/css/jquery-weui.min.css" />
+	</head>
+	<body>
+		<style>
+ 	/*修改导航样式*/
+ 	.weui-navbar{
+ 	width: 80%;
+ 	height:30px;
+ 	margin-left: 10%; 
+ 	margin-top: 10px;
+ 	background: #10AEFF;
+ 	border-radius: 10px;
+ 	border:1px solid #FFFFFF;
+ 	position: absolute;	
+ 	}
+ 	.weui-navbar a span{
+ 		position: absolute;
+ 		margin-top: -10px;
+ 		left: 10%;
+ 	}
+ 	.weui-navbar__item{
+ 		/*font-size: 18px;*/
+ 		color: #FFFFFF;
+ 	}
+ 	
+ 	/*订单费用中的栏珊格  */
+ 	 .weui-row {
+      	width: 98%;
+      	margin-left:1%;
+        margin-top: 5px;
+      }
+      .weui-row .weui-col-20 {
+	    width: 14.285%;
+	    width: calc((100% - 2%) / 7);
+      }
+       .weui-row.weui-no-gutter .weui-col-20 {
+	     width: 14.285%;
+	     font-size: 9px;
+	     opacity: 0.6;
+      } 
+      .weui-row .weui-col-33{
+      	 font-size: 10px;
+      	 border-radius: 5px;
+      	 color: #FFFFFF;
+      	 background: #04BE02;
+	     
+      }
+      .weui-row .weui-col-33.weui-col-red{
+      	background: #ED2D22;
+      }
+      [class*="weui-col-"] {
+        border: 1px solid #ccc;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+      }
+ </style>
+ 
+<!--导航栏-->
+<header class="head-wrap">	
+<div class="weui-tab">
+  <div class="weui-navbar">
+    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+    <span>基本信息</span>
+    </a>
+    <a class="weui-navbar__item" href="#tab2">
+    <span>商品列表</span>
+    </a>
+   <a class="weui-navbar__item" href="#tab3">
+      <span>订单费用</span>
+   </a>
+   <a class="weui-navbar__item" href="#tab4">
+      <span>审批信息</span>
+   </a>
+  </div>
+  <div class="weui-tab__bd">
+  	<div class="section-main">
+  		<!--基本信息-->
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单编号</span>
+     		<span class="main-wrap-right">2018052569036</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单类型</span>
+     		<span class="main-wrap-right">正常订单</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">渠道代码</span>
+     		<span class="main-wrap-right">CS001</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">付款方式</span>
+     		<span class="main-wrap-right">全款</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">下单时间</span>
+     		<span class="main-wrap-right">2018-05-25</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">安装日期</span>
+     		<span class="main-wrap-right">2018-07-26</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">首款日期</span>
+     		<span class="main-wrap-right"></span>
+     	</li>
+     </div>
+     
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">折扣比例</span>
+     		<span class="main-wrap-right">1</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户名称</span>
+     		<span class="main-wrap-right">1</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户电话</span>
+     		<span class="main-wrap-right">189345645653</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">客户地址</span>
+     		<span class="main-wrap-right">广州市番禺区南村镇万达广场B2-2601</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">是否有电梯</span>
+     		<span class="main-wrap-right">是</span>
+     	</li>
+     </div>
+      <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">是否电梯口是否小于50米</span>
+     		<span class="main-wrap-right">是</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">订单备注</span>
+     		<span class="main-wrap-right"></span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">设计师</span>
+     		<span class="main-wrap-right">张三 159342354569</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">项目经理</span>
+     		<span class="main-wrap-right">王五 13967567623</span>
+     	</li>
+     </div>
+     <div class="section-main-wrap">
+     	<li>
+     		<span class="main-wrap-left">监理</span>
+     		<span class="main-wrap-right">赵六 13350983421</span>
+     	</li>
+     </div>
+     
+    
+     
+    </div>
+    <!--商品列表-->	
+    <div id="tab2" class="weui-tab__bd-item"> 
+    	<!--导航下横线-->
+	<div class="border">
+		
+	</div>
+    <!--1-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号：KJB-9030-K2262</span>
+				</li>
+				<li>
+					<span>规格：沙发床</span>
+				</li>
+				<li>
+					<span>尺寸：沙发： 2260*880*830 （座包高400）</span>
+				</li>
+				<li>
+				
+					 <span>  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+					  	沙发床：1900*1400*280</span>
+				<li>
+					<span>单价：4500.00</span>
+				</li>
+				<li>
+					<span>小计：4500.00</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：布艺沙发</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    <li>
+				<span> &nbsp;</span>
+			</li>
+			<li>
+				<span> &nbsp;</span>
+			<li>
+				<span>数量：1</span>
+			</li>
+		    </ul>
+		</div>
+	</div>
+	
+	  <!--2-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号： KJBS-9122-K2189</span>
+				</li>
+				<li>
+					<span>规格： 沙发床</span>
+				</li>
+				<li>
+					<span>尺寸： 沙发： 2000*850*830 （座包高430）</span>
+				</li>
+				<li>
+				
+					  <span>  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+					  	沙发床：22220*1400*430</span>
+				<li>
+					<span>单价：4000.00</span>
+				</li>
+				<li>
+					<span>小计：4000.00</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：布艺沙发</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    <li>
+				<span> &nbsp;</span>
+			</li>
+			<li>
+				<span> &nbsp;</span>
+			<li>
+				<span>数量：1</span>
+			</li>
+		    </ul>
+		</div>
+	</div>
+	 <!--3-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号：OBL-9201-19</span>
+				</li>
+				<li>
+					<span>规格：餐台  </span>
+				</li>
+				<li>
+					<span>尺寸： 1490*900*785</span>
+				</li>
+				<li>
+				
+					  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span>  &nbsp;  </span>
+				<li>
+					<span>单价：1850.00</span>
+				</li>
+				<li>
+					<span>小计：1850.00</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：次卧床</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    <li>
+				<span> &nbsp;</span>
+			</li>
+			<li>
+				<span> &nbsp;</span>
+			<li>
+				<span>数量：1</span>
+			</li>
+		    </ul>
+		</div>
+	</div>
+	
+	<!--4-->
+	<div class="main-wrap-list">
+		<div class="section-wrap-left">
+			<img src="../dist/demos/images/swiper-3.jpg" />
+		</div>
+		<div class="section-wrap-center">
+			<ul>
+				<li>
+					<span>型号：OBL-9801</span>
+				</li>
+				<li>
+					<span>规格：1.5普箱床</span>
+				</li>
+				<li>
+					<span>尺寸：外框尺寸： 2400*1600*1055 </span>
+				</li>
+				<li>
+				
+					  <span>  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+					  	内框尺寸：1.5*2.5</span>
+				<li>
+					<span>单价：2650.00</span>
+				</li>
+				<li>
+					<span>小计：2650.00</span>
+				</li>
+			</ul>
+		</div>
+		<div class="section-wrap-right">
+			<ul>
+		    <li>
+		    	<span>标题：布艺沙发</span>
+		    </li>
+		    <li>
+		    	<span>选项：</span>
+		    </li>
+		    <li>
+				<span> &nbsp;</span>
+			</li>
+			<li>
+				<span> &nbsp;</span>
+			<li>
+				<span>数量：1</span>
+			</li>
+		    </ul>
+		</div>
+	</div>
+	<div class="main-wrap-list-num">
+		<ul>
+		<li>
+		<span>
+			<strong>合计数量：4</strong>
+		</span>
+		</li>
+		<li>
+		<span>
+			<strong>合计金额：13000.00</strong>
+		</span>
+		</li>
+		</ul>
+	</div>
+    </div>
+
+
+   <!--订单费用-->
+    <div id="tab3" class="weui-tab__bd-item">
+    	<!--导航下横线-->
+	<div class="border"></div>
+    	<div class="main-title-cost">
+    		<div class="main-wrap-cost">
+    			<span>
+    				订单费用
+    			</span>
+    		</div>
+    		<div class="main-wrap-statistics">
+    			<li>
+    				<span>商品合计：￥13000.00</span>
+    				<span>折扣： 1</span>
+    				<span>折后价：￥13000.00</span>
+    			</li>
+    		</div>
+    	</div>
+    	<div class="main-title-cost">
+    		<div class="main-wrap-statistics">
+    			<li>
+    				<span>费用统计：￥0.00</span>
+    			</li>
+    		</div>
+    	<!--栏珊格-->	
+      <div class="weui-row">
+      <div class="weui-row weui-no-gutter">
+      <div class="weui-col-20">类型</div>
+      <div class="weui-col-20">费用</div>
+      <div class="weui-col-20">承担方</div>
+      <div class="weui-col-20">说明</div>
+      <div class="weui-col-20">凭证</div>
+      <div class="weui-col-20">添加时间</div>
+      <div class="weui-col-20">添加人</div>
+      </div>
+    </div>	
+    	</div>
+    <div class="main-wrap-total">
+    <div class="wrap-total-statistics">
+    			<li>
+    				<span>订单总计：￥13000.00</span>
+    				<span>已付：￥3900.00（30%）</span>
+    			</li>
+    </div>
+    <div class="wrap-total-bottom">
+    	<div class="weui-row">
+      <div class="weui-col-33">一期款：￥3900.00</div>
+      <div class="weui-col-33 weui-col-red">二期款：￥0.00</div>
+      <div class="weui-col-33 weui-col-red">三期款：￥0.00</div>
+    </div>
+    </div>
+    </div>
+    
+  </div>
+   
+  	
+  	
+  	
+  <!--审批信息--> 
+<div id="tab4" class="weui-tab__bd-item">
+	<!--导航下横线-->
+	<div class="border">
+		
+	</div>
+
+      <div class="main-wrap-mation">
+      	<div class="main-wrap-process">
+      	<span>流程</span>
+      	</div>
+      	<!--时间线-->
+      	<ul class="time-vertical">
+        <li>
+        	<b></b><span>1</span>
+        	<a href="javascript:void(0)">李四  发起审批</a>
+        </li>
+        <li class="border-wrap-left"><i></i><span>2</span>
+        	<a href="javascript:void(0)" style="color: #666666;">王五  审批</a>
+        </li>
+        <li><i></i><span>3</span>
+        	<a href="javascript:void(0)" style="color: #666666;">完成</a>
+        </li>
+    </ul>	
+      </div>
+       <div class="main-wrap-mation">
+      	<div class="main-wrap-process">
+      	<span>日志</span>
+      	</div>
+      	<!--第二时间线-->
+      	<div class="time-two">
+      	<ul class="time-vertical-two">
+        <li>
+        	<b></b>
+        	<span style="color: #CE272D;"><strong>2018年5月26日 13:56</strong></span><br />
+        	<span>李四  创建审批</span><br />
+        </li>
+    </ul>
+    </div>
+      </div>
+</div>
+    
+    
+   </div> 
+ <!-- 避免底部遮住商品展示-->
+  <div style="height:45px; line-height:45px; clear:both;"></div>
+ </div>
+ </div>
+</header>
+
+
+			
+<footer>
+	
+                <div class="footer">            
+                   <div class="footer-button">
+                    <input type="button" class="agree" id="btn1" value="同意">
+                    <input type="button" class="refuse" id="btn2" value="拒绝">
+                    </div>  
+                </div>
+</footer>
+
+		<!--引用jqweui js-->
+<script  src="../dist/lib/jquery-2.1.4.js" ></script>
+<script  src="../dist/js/jquery-weui.min.js" ></script>
+
+<script  src="../dist/js/swiper.min.js" ></script>
+<script  src="../dist/js/city-picker.min.js" ></script>
+    <script>
+//      同意
+      $(document).on("click", "#btn1", function() {
+        $.prompt({
+          title: "同意审批",
+          onOK: function(text) {
+//          $.alert("已同意");
+            window.location.href="capproval.html";
+          },
+          onCancel: function() {
+            console.log("已取消");
+          },
+        input: ' 请输入批语，也可以留空'
+          
+        });
+      });
+      
+//    拒绝
+      $(document).on("click", "#btn2", function() {
+        $.prompt({
+          title: "拒绝审批",
+          onOK: function(text) {
+//          $.alert("已拒绝");
+            window.location.href="capproval.html";
+          },
+          onCancel: function() {
+            console.log("");
+          },
+        input: ' 请输入批语，也可以留空'
+          
+        });
+      });
+      
+    </script>
+	</body>
+</html>
